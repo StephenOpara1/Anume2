@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" onclick="show()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Izuchukwu's app</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<style>
+  *{
+  box-sizing: border-box;
+
+}
+
+.outer{
+  width: 255px;
+  height: 255px;
+  background: #242427;
+  border-radius: 50px;
+  justify-content: center;
+  display: flex;
+  position : absolute;
+  box-shadow: 10px 10px 30px black;
+  overflow: hidden;
+  top: 180px;
+  left: 50px;
+  border: 3px solid #242427 ;
+  
+}
+
+.outer div:first-child {
+  width: 230px;
+  height: 230px;
+  background:    #242427;
+  padding: 5px;
+  justify-content: center;
+  top: 9px;
+  color: white;
+  position: absolute;
+  border-radius: 40px;
+  letter-spacing: 4px;
+  align-items: center;
+  box-shadow: inset 30px 30px 70px  black;
+  display: flex;
+  font-size: 30px;
+  z-index: 2;
+  font-size: 35px;
+ background-image: none ;
+ background-size: cover;
+ font-family: none;
+ 
+}
+
+#ion{
+  
+ height: 600px;
+ width: 600px;
+ background-image: conic-gradient( white 20deg, transparent 120deg);
+ z-index: 1;
+ animation-name: rotate;
+animation-duration: 1s;
+ animation-iteration-count: infinite;
+
+ position: absolute;
+ top:-200px;
+ transition-duration: 2s;
+ animation-timing-function: linear;
+ 
+ 
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg)
+  }
+}
+
+ul{
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+}
+
+input{
+  background-color: #242427;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 4px;
+  border-style: none;
+  box-shadow: inset 2px 2px 20px #000;
+  border: 2px solid black;
+  outline: none;
+}
+
+.button{
+  right: -210px;
+  position: relative;
+  bottom: 165px;
+  height: 113px;
+  width: 120px;
+  font-size: 30px;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 10px black;
+  opacity: 1;
+  transition-duration: 0.5s;
+  
+ }
+
+input:hover{
+  transform: scale(1.05);
+  border: 1px solid cyan;
+  
+}
+
+.he{
+  top: 210px;
+  left: 20px;
+  position: relative;
+  color: papayawhip;
+  font-size: 40px;
+  font-weight: 20px;
+  text-shadow: 5px 5px 4px black;
+ 
+}
+body{
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+#sped{
+  position: relative;
+  top: 340px;
+  width: 170px;
+}
+
+li{
+  transform: scaleY(1);
+}
+
+#gogo{
+  top: 272px;
+  position: relative;
+  width: 160px;
+  left: 50px;
+}
+
+#back{
+  position: relative;
+  top: 230px;
+  width: 98%;
+}
+
+#tyi{
+  width: 205px;
+}
+
+
+.button:hover{
+  color: white;
+  text-shadow: 20px 20px 100px cyan;
+  transform: scale(1.1);
+  border: 1px solid cyan;
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+
+
+.you{
+  font-size: 0.5px;
+  margin-top: 20px;
+  font-weight: 1000;
+}
+
+#tye{
+  top: 230px;
+  position: relative;
+  height: 20px;
+}
+
+.hipi{
+  position: relative;
+  bottom: 20px;
+  opacity: 0;
+  color: cyan;
+transition-delay: 0.1s;
+}
+
+
+
+.int{
+  position: relative;
+  top: 16px;
+  transition-delay: 0.1s;
+  
+}
+
+.button:hover > .int{
+  opacity: 0;
+}
+.button:hover > .hipi{
+  opacity: 1;
+}
+input::placeholder {
+  color: cyan;
+}
+
+#utr{
+  position: relative;
+  top: 97px;
+  left: 210px;
+  width: 125px;
+  height: 10px;
+}
+
+#hev{
+  width: 30px;
+  height: 30px;
+  top: -320px;
+  position: relative;
+  right: 127px;
+}
+
+#choose{
+  top: -351px;
+  position: relative;
+  left: 35px;
+  border: none;
+  color: cyan;
+  background: black;
+  padding: 4px;
+  border-radius: 7px;
+  outline: none;
+}
+
+  
+  #passw{
+    position: absolute;
+    z-index: 99;
+    color: cyan;
+    height:660px ;
+    width: 100%;
+    background: black;
+    top: 0px;
+    text-align: center;
+    display: block;
+    font-family:serif;
+    margin-top: 0;
+    transform: scale(1.03) scaleX(1.01);
+
+  }
+  #ypb{
+    border: none;
+    color: cyan;
+    background: black;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    
+  }
+  
+#video{
+   opacity: 0;
+   width: 200px;
+   height: auto;
+   border-radius: 8px;
+   border: 2px solid cyan;
+  }
+  
+  .theo{
+    position: fixed;
+  }
+  
+
+</style>
+
+<body bgcolor="#181818" id="bgc" >
+  
+
+  <div class="theo">
+  
+  <div>
+  <div class="outer">
+   
+    <div id="hok">
+      
+      <ul>
+        
+         
+        <li id="hio"></li>
+        <li id="hie"></li>
+        
+        <li class="you" id="opi"></li>
+       
+      </ul>    </div>
+    
+    <div id="ion"></div>
+  </div>
+  
+    <input type="color" name="firstName" placeholder="color"  id="tyi"/>
+
+  
+<br>
+<input type="text" name="grinch" placeholder="First name"/>
+<br>
+<input type="text" name="how" placeholder="Last name" >
+<input type="text" name="Hit" placeholder="Speed" id="sped">
+<br>
+  <button id="yop" class="button" type="button" onclick="getVaue()" ><span class="int">Display</span> <span class="hipi">Done</span></button>
+  <input type="text" name="the" id="gogo" placeholder="fontWeight">
+     <input type="color" name="lol" id="back" placeholder="Change the Background Color">
+     <input type="text" placeholder="statement" name="yes" id="tye">
+ 
+ <div>
+   <h1 class="he">Write Your Name</h1>
+ </div>
+ <input type="color" name="hint" id="utr" >
+ <input type="text" placeholder="shadow" name="gweb" id="hev">
+ <br>
+ <div><select onchange="changeFont()" name="Fontsty" id="choose">
+   <option value="san-serif">San-serif</option>
+   <option value="monospace">monospace</option>
+   <option value="serif">serif</option>
+   <option value="cursive">Cursive</option>
+   
+   
+ </select>
+ </div>
+</div>
+
+<div class="haveo" id="passw">
+  <h1>Password</h1>
+  <input name="pass" type="text">
+  <button onclick="ent()" id="ypb" type="submit">Enter</button>
+  <br>
+  <br>
+  <div id="intruder">
+<!DOCTYPE html>
+<html lang="en" onclick="show()">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Izuchukwu's app</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<style>
+  *{
+  box-sizing: border-box;
+
+}
+
+.outer{
+  width: 255px;
+  height: 255px;
+  background: #242427;
+  border-radius: 50px;
+  justify-content: center;
+  display: flex;
+  position : absolute;
+  box-shadow: 10px 10px 30px black;
+  overflow: hidden;
+  top: 180px;
+  left: 50px;
+  border: 3px solid #242427 ;
+  
+}
+
+.outer div:first-child {
+  width: 230px;
+  height: 230px;
+  background:    #242427;
+  padding: 5px;
+  justify-content: center;
+  top: 9px;
+  color: white;
+  position: absolute;
+  border-radius: 40px;
+  letter-spacing: 4px;
+  align-items: center;
+  box-shadow: inset 30px 30px 70px  black;
+  display: flex;
+  font-size: 30px;
+  z-index: 2;
+  font-size: 35px;
+ background-image: none ;
+ background-size: cover;
+ font-family: none;
+ 
+}
+
+#ion{
+  
+ height: 600px;
+ width: 600px;
+ background-image: conic-gradient( white 20deg, transparent 120deg);
+ z-index: 1;
+ animation-name: rotate;
+animation-duration: 1s;
+ animation-iteration-count: infinite;
+
+ position: absolute;
+ top:-200px;
+ transition-duration: 2s;
+ animation-timing-function: linear;
+ 
+ 
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg)
+  }
+}
+
+ul{
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+}
+
+input{
+  background-color: #242427;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 4px;
+  border-style: none;
+  box-shadow: inset 2px 2px 20px #000;
+  border: 2px solid black;
+  outline: none;
+}
+
+.button{
+  right: -210px;
+  position: relative;
+  bottom: 165px;
+  height: 113px;
+  width: 120px;
+  font-size: 30px;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 10px black;
+  opacity: 1;
+  transition-duration: 0.5s;
+  
+ }
+
+input:hover{
+  transform: scale(1.05);
+  border: 1px solid cyan;
+  
+}
+
+.he{
+  top: 210px;
+  left: 20px;
+  position: relative;
+  color: papayawhip;
+  font-size: 40px;
+  font-weight: 20px;
+  text-shadow: 5px 5px 4px black;
+ 
+}
+body{
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+#sped{
+  position: relative;
+  top: 340px;
+  width: 170px;
+}
+
+li{
+  transform: scaleY(1);
+}
+
+#gogo{
+  top: 272px;
+  position: relative;
+  width: 160px;
+  left: 50px;
+}
+
+#back{
+  position: relative;
+  top: 230px;
+  width: 98%;
+}
+
+#tyi{
+  width: 205px;
+}
+
+
+.button:hover{
+  color: white;
+  text-shadow: 20px 20px 100px cyan;
+  transform: scale(1.1);
+  border: 1px solid cyan;
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+
+
+.you{
+  font-size: 0.5px;
+  margin-top: 20px;
+  font-weight: 1000;
+}
+
+#tye{
+  top: 230px;
+  position: relative;
+  height: 20px;
+}
+
+.hipi{
+  position: relative;
+  bottom: 20px;
+  opacity: 0;
+  color: cyan;
+transition-delay: 0.1s;
+}
+
+
+
+.int{
+  position: relative;
+  top: 16px;
+  transition-delay: 0.1s;
+  
+}
+
+.button:hover > .int{
+  opacity: 0;
+}
+.button:hover > .hipi{
+  opacity: 1;
+}
+input::placeholder {
+  color: cyan;
+}
+
+#utr{
+  position: relative;
+  top: 97px;
+  left: 210px;
+  width: 125px;
+  height: 10px;
+}
+
+#hev{
+  width: 30px;
+  height: 30px;
+  top: -320px;
+  position: relative;
+  right: 127px;
+}
+
+#choose{
+  top: -351px;
+  position: relative;
+  left: 35px;
+  border: none;
+  color: cyan;
+  background: black;
+  padding: 4px;
+  border-radius: 7px;
+  outline: none;
+}
+
+  
+  #passw{
+    position: absolute;
+    z-index: 99;
+    color: cyan;
+    height:660px ;
+    width: 100%;
+    background: black;
+    top: 0px;
+    text-align: center;
+    display: block;
+    font-family:serif;
+    margin-top: 0;
+    transform: scale(1.03) scaleX(1.01);
+
+  }
+  #ypb{
+    border: none;
+    color: cyan;
+    background: black;
+    border: 1px solid cyan;
+    border-radius: 5px;
+    
+  }
+  
+#video{
+   opacity: 0;
+   width: 200px;
+   height: auto;
+   border-radius: 8px;
+   border: 2px solid cyan;
+  }
+  
+  .theo{
+    position: fixed;
+  }
+  
+
+</style>
+
+<body bgcolor="#181818" id="bgc" >
+  
+
+  <div class="theo">
+  
+  <div>
+  <div class="outer">
+   
+    <div id="hok">
+      
+      <ul>
+        
+         
+        <li id="hio"></li>
+        <li id="hie"></li>
+        
+        <li class="you" id="opi"></li>
+       
+      </ul>    </div>
+    
+    <div id="ion"></div>
+  </div>
+  
+    <input type="color" name="firstName" placeholder="color"  id="tyi"/>
+
+  
+<br>
+<input type="text" name="grinch" placeholder="First name"/>
+<br>
+<input type="text" name="how" placeholder="Last name" >
+<input type="text" name="Hit" placeholder="Speed" id="sped">
+<br>
+  <button id="yop" class="button" type="button" onclick="getVaue()" ><span class="int">Display</span> <span class="hipi">Done</span></button>
+  <input type="text" name="the" id="gogo" placeholder="fontWeight">
+     <input type="color" name="lol" id="back" placeholder="Change the Background Color">
+     <input type="text" placeholder="statement" name="yes" id="tye">
+ 
+ <div>
+   <h1 class="he">Write Your Name</h1>
+ </div>
+ <input type="color" name="hint" id="utr" >
+ <input type="text" placeholder="shadow" name="gweb" id="hev">
+ <br>
+ <div><select onchange="changeFont()" name="Fontsty" id="choose">
+   <option value="san-serif">San-serif</option>
+   <option value="monospace">monospace</option>
+   <option value="serif">serif</option>
+   <option value="cursive">Cursive</option>
+   
+   
+ </select>
+ </div>
+</div>
+
+<div class="haveo" id="passw">
+  <h1>Password</h1>
+  <input name="pass" type="text">
+  <button onclick="ent()" id="ypb" type="submit">Enter</button>
+  <br>
+  <br>
+  <div id="intruder">
+    
+  </div>
+  <br>
+  <img id="video" src="/audio /IMG-20240622-WA0006.jpg" alt="">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="vido"></div>
+</div>
+
+  <script type="text/javascript">
+  
+  
+    function getVaue() {
+      const vat = document.getElementsByName("firstName")[0].value;
+      document.getElementById("hio").style.color = vat;;
+      
+      document.getElementById("hie").style.color = vat;;
+      
+      document.getElementById("ion").style.backgroundColor = vat;;
+      
+      document.getElementById("opi").style.color = vat;;
+      
+      
+      const teq = document.getElementsByName("grinch")[0].value;
+      document.getElementById("hio").innerHTML= teq;;
+    
+    
+      const tep = document.getElementsByName("how")[0].value;
+      document.getElementById("hie").innerHTML= tep;;
+      
+ 
+      const pep = document.getElementsByName("Hit")[0].value;
+      document.getElementById("ion").style.animationDuration= pep;;
+      
+      
+      const lip = document.getElementsByName("the")[0].value;
+      document.getElementById("hie").style.fontWeight= lip;;
+      const guy = document.getElementsByName("the")[0].value;
+      document.getElementById("hio").style.fontWeight= guy;;
+      
+         const gut = document.getElementsByName("lol")[0].value;
+      document.getElementById("bgc").style.backgroundColor= gut;;
+      
+      const guri = document.getElementsByName("yes")[0].value;
+      document.getElementById("opi").innerHTML= guri;;
+      
+   const gurp = document.getElementsByName("hint")[0].value;
+      document.getElementById("hok").style.backgroundColor= gurp;;
+      
+      const gurll = document.getElementsByName("gweb")[0].value;
+      document.getElementById("hok").style.boxShadow= gurll;;
+      
+      const pen = document.getElementsByName("zen")[0].value;
+      
+      document.getElementById("hok").style.backgroundImage=pen;};
+      
+    
+      function changeFont(){
+      const puy = document.getElementsByName("Fontsty")[0].value;
+      
+      document.getElementById("hok").style.fontFamily= puy;
+};
+ 
+    function ent(){
+      const inpu= document.getElementsByName("pass")[0].value;
+      if (inpu=="happy"){
+        document.getElementById("passw").style.display="none";
+        alert("Access granted");
+      }
+      else{
+        document.getElementById("intruder").innerHTML="Intruder!!!!, Get out!!!!, or I will call the police.";
+        
+        document.getElementById("video").style.opacity=1;
+        document.getElementById("vido").innerHTML="Hint: A good mood.";
+      };
+    };
+   
+   
+      </script>
+</body>
+</html>￼Enter
